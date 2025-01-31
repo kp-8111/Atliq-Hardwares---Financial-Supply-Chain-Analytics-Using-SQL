@@ -87,5 +87,14 @@ This project strengthened my **SQL Data Engineering** skills, including:
 
 ---
 
+## 📷 Data Model & SQL Database Diagrams
 
-🚀 **If you’re a recruiter or fellow data enthusiast, feel free to connect & explore!**  
+### 📊 **Database Schema Diagram**
+![Database Schema](https://github.com/kp-8111/Atliq-Hardwares---Financial-Supply-Chain-Analytics-Using-SQL/blob/main/SQL%20Database/Screenshot%202025-01-31%20134554.png)
+
+### 📈 **SQL Database Details**
+![SQL Database Details](https://github.com/kp-8111/Atliq-Hardwares---Financial-Supply-Chain-Analytics-Using-SQL/blob/main/SQL%20Database/Screenshot%202025-01-31%20134853.png)
+
+---
+
+🚀 **If you’re a recruiter or fellow data enthusiast, feel free to connect & explore!**
