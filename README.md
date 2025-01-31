@@ -54,6 +54,16 @@ The database **`gdb0041`** consists of structured tables, views, stored procedur
 
 ---
 
+## 📷 Data Model & SQL Database Diagrams
+
+### 📊 **Database Schema Diagram**
+![Database Schema](https://github.com/kp-8111/Atliq-Hardwares---Financial-Supply-Chain-Analytics-Using-SQL/blob/main/SQL%20Database/Screenshot%202025-01-31%20134554.png)
+
+### 📈 **SQL Database Details**
+![SQL Database Details](https://github.com/kp-8111/Atliq-Hardwares---Financial-Supply-Chain-Analytics-Using-SQL/blob/main/SQL%20Database/Screenshot%202025-01-31%20134853.png)
+
+---
+
 ## 🔥 Key Data Engineering Concepts Learned  
 
 This project strengthened my **SQL Data Engineering** skills, including:  
@@ -84,16 +94,6 @@ This project strengthened my **SQL Data Engineering** skills, including:
 ## 🛠️ Technologies Used  
 
 - **SQL (MySQL)** – **Primary technology for data engineering, ETL, and analysis**  
-
----
-
-## 📷 Data Model & SQL Database Diagrams
-
-### 📊 **Database Schema Diagram**
-![Database Schema](https://github.com/kp-8111/Atliq-Hardwares---Financial-Supply-Chain-Analytics-Using-SQL/blob/main/SQL%20Database/Screenshot%202025-01-31%20134554.png)
-
-### 📈 **SQL Database Details**
-![SQL Database Details](https://github.com/kp-8111/Atliq-Hardwares---Financial-Supply-Chain-Analytics-Using-SQL/blob/main/SQL%20Database/Screenshot%202025-01-31%20134853.png)
 
 ---
 
