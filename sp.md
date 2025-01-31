@@ -128,3 +128,130 @@ BEGIN
     ORDER BY s.date;
 END
 ```
+# 4. `get_top_n_markets_by_net_sales` Stored Procedure
+
+**Description**:  
+This stored procedure identifies the top N markets by net sales for a given fiscal year.
+
+**Parameters**:
+- `in_fiscal_year` (INT): The fiscal year for analysis.
+- `in_top_n` (INT): The number of top markets to retrieve.
+
+**Query**:
+```sql
+CREATE DEFINER=`root`@`localhost` PROCEDURE `get_top_n_markets_by_net_sales`(
+    in_fiscal_year INT,
+    in_top_n INT
+)
+BEGIN
+    SELECT 
+        market,
+        ROUND(SUM(net_sales) / 1000000, 2) AS net_sales_mln
+    FROM gdb0041.net_sales
+    WHERE fiscal_year = in_fiscal_year
+    GROUP BY market
+    ORDER BY net_sales_mln DESC
+    LIMIT in_top_n;
+END
+```
+# 5. `get_top_n_products_by_net_sales` Stored Procedure
+
+**Description**:  
+This stored procedure identifies the top N products by net sales for a given fiscal year.
+
+**Parameters**:
+- `in_fiscal_year` (INT): The fiscal year for analysis.
+- `in_top_n` (INT): The number of top products to retrieve.
+
+**Query**:
+```sql
+CREATE DEFINER=`root`@`localhost` PROCEDURE `get_top_n_products_by_net_sales`(
+    in_fiscal_year INT,
+    in_top_n INT
+)
+BEGIN
+    SELECT
+        product,
+        ROUND(SUM(net_sales) / 1000000, 2) AS net_sales_mln
+    FROM gdb0041.net_sales
+    WHERE fiscal_year = in_fiscal_year
+    GROUP BY product 
+    ORDER BY net_sales_mln DESC
+    LIMIT in_top_n;
+END
+```
+# 6. `top_n_products_per_division_by_sold_qty` Stored Procedure
+
+**Description**:  
+This stored procedure retrieves the top N products per division based on sold quantity for a given fiscal year.
+
+**Parameters**:
+- `in_fiscal_year` (INT): The fiscal year for analysis.
+- `in_top_n` (INT): The number of top products to retrieve per division.
+
+**Query**:
+```sql
+CREATE DEFINER=`root`@`localhost` PROCEDURE `top_n_products_per_division_by_sold_qty`(
+    in_fiscal_year INT,
+    in_top_n INT
+)
+BEGIN
+    WITH cte1 AS (
+        SELECT 
+            p.division,
+            p.product,
+            SUM(sold_quantity) AS total_qty
+        FROM fact_sales_monthly s
+        JOIN dim_product p 
+        ON
+            p.product_code = s.product_code
+        WHERE fiscal_year = in_fiscal_year
+        GROUP BY p.product
+    ),
+    cte2 AS (
+        SELECT
+            *,
+            DENSE_RANK() OVER(PARTITION BY division ORDER BY total_qty DESC) AS drnk
+        FROM cte1
+    )
+    SELECT * FROM cte2 WHERE drnk <= in_top_n;
+END
+```
+# 7. `top_n_products_per_division_by_sold_qty` Stored Procedure
+
+**Description**:  
+This stored procedure retrieves the top N products per division based on sold quantity for a given fiscal year.
+
+**Parameters**:
+- `in_fiscal_year` (INT): The fiscal year for analysis.
+- `in_top_n` (INT): The number of top products to retrieve per division.
+
+**Query**:
+```sql
+CREATE DEFINER=`root`@`localhost` PROCEDURE `top_n_products_per_division_by_sold_qty`(
+    in_fiscal_year INT,
+    in_top_n INT
+)
+BEGIN
+    WITH cte1 AS (
+        SELECT 
+            p.division,
+            p.product,
+            SUM(sold_quantity) AS total_qty
+        FROM fact_sales_monthly s
+        JOIN dim_product p 
+        ON
+            p.product_code = s.product_code
+        WHERE fiscal_year = in_fiscal_year
+        GROUP BY p.product
+    ),
+    cte2 AS (
+        SELECT
+            *,
+            DENSE_RANK() OVER(PARTITION BY division ORDER BY total_qty DESC) AS drnk
+        FROM cte1
+    )
+    SELECT * FROM cte2 WHERE drnk <= in_top_n;
+END
+```
+
