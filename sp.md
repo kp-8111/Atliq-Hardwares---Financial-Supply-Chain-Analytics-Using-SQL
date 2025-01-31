@@ -56,6 +56,7 @@ BEGIN
     USING(customer_code)
     ORDER BY forecast_accuracy DESC;
 END
+```sql
 
 ### 2. `get_market_badge`
 **Description**: This stored procedure assigns a performance badge (Gold/Silver) to a market based on the total sales volume for a given fiscal year.
