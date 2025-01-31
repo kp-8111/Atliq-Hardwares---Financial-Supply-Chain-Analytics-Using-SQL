@@ -17,6 +17,16 @@ This project demonstrates **my expertise in SQL-based data engineering**, coveri
 ## 📂 Database Schema & Components  
 
 The database **`gdb0041`** consists of structured tables, views, stored procedures, and functions to support **business intelligence and decision-making** at Atliq Hardwares.  
+---
+
+## 📷 Data Model & SQL Database Diagrams
+
+### 📊 **Database Schema Diagram**
+![Database Schema](https://github.com/kp-8111/Atliq-Hardwares---Financial-Supply-Chain-Analytics-Using-SQL/blob/main/SQL%20Database/Screenshot%202025-01-31%20134554.png)
+
+### 📈 **SQL Database Details**
+![SQL Database Details](https://github.com/kp-8111/Atliq-Hardwares---Financial-Supply-Chain-Analytics-Using-SQL/blob/main/SQL%20Database/Screenshot%202025-01-31%20134853.png)
+
 
 ### 🏗️ **Tables**  
 | Table Name                   | Description                                  |
@@ -52,15 +62,6 @@ The database **`gdb0041`** consists of structured tables, views, stored procedur
 - `get_fiscal_quarter()` - Determines fiscal quarter from a given date  
 - `get_fiscal_year()` - Returns the fiscal year of a transaction  
 
----
-
-## 📷 Data Model & SQL Database Diagrams
-
-### 📊 **Database Schema Diagram**
-![Database Schema](https://github.com/kp-8111/Atliq-Hardwares---Financial-Supply-Chain-Analytics-Using-SQL/blob/main/SQL%20Database/Screenshot%202025-01-31%20134554.png)
-
-### 📈 **SQL Database Details**
-![SQL Database Details](https://github.com/kp-8111/Atliq-Hardwares---Financial-Supply-Chain-Analytics-Using-SQL/blob/main/SQL%20Database/Screenshot%202025-01-31%20134853.png)
 
 ---
 
