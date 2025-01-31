@@ -87,10 +87,5 @@ This project strengthened my **SQL Data Engineering** skills, including:
 
 ---
 
-## 🔗 Explore the Full Project  
-
-📌 **Check it out on NovyPro:** [Click Here](https://project.novypro.com/6Ts4ch)  
-
----
 
 🚀 **If you’re a recruiter or fellow data enthusiast, feel free to connect & explore!**  
