@@ -1,4 +1,4 @@
-# 🏆 SQL-Based Data Engineering: Atliq Hardwares - Financial & Supply Chain Analytics  
+# SQL-Based Data Engineering: Atliq Hardwares - Financial & Supply Chain Analytics  
 
 ## 📌 Project Overview  
 This project showcases **SQL-driven data engineering solutions** for Atliq Hardwares, focusing on:  
