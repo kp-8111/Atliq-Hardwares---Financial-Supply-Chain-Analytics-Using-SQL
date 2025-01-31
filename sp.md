@@ -56,3 +56,45 @@ BEGIN
     USING(customer_code)
     ORDER BY forecast_accuracy DESC;
 END
+
+### 2. `get_market_badge`
+**Description**: This stored procedure assigns a performance badge (Gold/Silver) to a market based on the total sales volume for a given fiscal year.
+
+**Parameters**:
+- `in_market` (VARCHAR): The market to evaluate.
+- `in_fiscal_year` (YEAR): The fiscal year for evaluation.
+- `out_badge` (VARCHAR): Output parameter for the badge (Gold/Silver).
+
+**Query**:
+```sql
+CREATE DEFINER=`root`@`localhost` PROCEDURE `get_market_badge`(
+    IN in_market VARCHAR(45),
+    IN in_fiscal_year YEAR,
+    OUT out_badge VARCHAR(45)
+)
+BEGIN
+    DECLARE qty INT DEFAULT 0;
+    
+    -- Set default market
+    IF in_market = "" THEN 
+        SET in_market = "india";
+    END IF;
+    
+    -- Retrieve total quantity for the given market and fiscal year
+    SELECT 
+        SUM(s.sold_quantity) INTO qty
+    FROM fact_sales_monthly s
+    JOIN dim_customer c
+    ON c.customer_code = s.customer_code
+    WHERE 
+        get_fiscal_year(s.date) = in_fiscal_year AND
+        c.market = in_market
+    GROUP BY market;
+        
+    -- Determine market badge
+    IF qty > 5000000 THEN
+        SET out_badge = "Gold";
+    ELSE 
+        SET out_badge = "Silver";
+    END IF;
+END
