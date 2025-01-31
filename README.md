@@ -3,7 +3,7 @@
 ## 📌 Project Overview  
 This project showcases **SQL-driven data engineering solutions** for Atliq Hardwares, focusing on:  
 ✔ **Financial Analytics** – Revenue, profit, and loss insights 📊  
-✔ **Top Customers, Products & Markets** – Sales trend analysis 🛒  
+✔ **Top Customers, Products & Markets** – Sales trend analysis 🛒   
 ✔ **Supply Chain Forecasting** – Optimizing demand & logistics 🚚  
 ✔ **Data Engineering Best Practices** – Performance optimization, indexing, and query efficiency ⚙  
 
