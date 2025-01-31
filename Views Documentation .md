@@ -1,4 +1,4 @@
-# SQL Views for Sales Data Analysis
+#  Views Documentation
 
 This repository contains a set of SQL views designed to facilitate sales data analysis. These views are part of a database schema that processes data from multiple tables related to sales transactions, customer information, and product details. The views are created to support business intelligence and data analysis efforts, allowing users to easily analyze gross sales, discounts, and net sales over different fiscal periods.
 
