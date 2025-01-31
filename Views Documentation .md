@@ -17,7 +17,7 @@ Each view builds on the previous one, allowing for a step-by-step breakdown of t
 
 These views are ideal for businesses seeking to gain insights into their sales performance over time, assess the impact of discounts on profitability, and make data-driven decisions to optimize sales strategies.
 
-# `gross_sales` View
+# 1. `gross_sales` View
 
 This SQL view calculates the total gross sales for each transaction by multiplying the sold quantity with the gross price per item.
 
@@ -46,7 +46,7 @@ VIEW `gross_sales` AS
         JOIN `fact_gross_price` `g` ON (((`g`.`product_code` = `s`.`product_code`)
             AND (`g`.`fiscal_year` = `s`.`fiscal_year`))))
 ```
-# `sales_preinv_discount` View
+# 2. `sales_preinv_discount` View
 
 This SQL view calculates the gross sales total with pre-invoice discounts applied. It also provides the pre-invoice discount percentage for each sales transaction.
 
@@ -77,7 +77,7 @@ VIEW `sales_preinv_discount` AS
         JOIN `fact_pre_invoice_deductions` `pre` ON (((`s`.`customer_code` = `pre`.`customer_code`)
             AND (`pre`.`fiscal_year` = `s`.`fiscal_year`))))
 ```
-# `sales_postinv_discount` View
+# 3. `sales_postinv_discount` View
 
 This SQL view calculates post-invoice discounts and derives the net invoice sales by applying these discounts to the gross sales total.
 
@@ -106,7 +106,7 @@ VIEW `sales_postinv_discount` AS
             AND (`s`.`customer_code` = `po`.`customer_code`)
             AND (`s`.`date` = `po`.`date`))))
 ```
-# `net_sales` View
+# 4. `net_sales` View
 
 This SQL view calculates the final net sales by applying both pre- and post-invoice discounts to the gross sales total.
 
