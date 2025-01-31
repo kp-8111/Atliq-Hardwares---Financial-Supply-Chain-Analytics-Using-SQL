@@ -2,12 +2,12 @@
 
 ## 📌 Project Overview  
 This project showcases **SQL-driven data engineering solutions** for Atliq Hardwares, focusing on:  
-✔ **Financial Analytics** – Revenue, profit, and loss insights 📊  
-✔ **Top Customers, Products & Markets** – Sales trend analysis 🛒   
-✔ **Supply Chain Forecasting** – Optimizing demand & logistics 🚚  
-✔ **Data Engineering Best Practices** – Performance optimization, indexing, and query efficiency ⚙  
+ **Financial Analytics** – Revenue, profit, and loss insights 📊  
+ **Top Customers, Products & Markets** – Sales trend analysis 🛒   
+ **Supply Chain Forecasting** – Optimizing demand & logistics 🚚  
+ **Data Engineering Best Practices** – Performance optimization, indexing, and query efficiency ⚙  
 
-### 🔍 Why This Project?  
+###  Why This Project?  
 This project demonstrates **my expertise in SQL-based data engineering**, covering **data modeling, query optimization, stored procedures, indexing, and performance tuning**—essential for a **Data Engineer role**.  
 
 > **Note:** This project is fully developed in **SQL (MySQL)**. Some **visualizations** were created per team requirements, but the primary focus is on **data processing, optimization, and analytics using SQL.**  
