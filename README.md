@@ -74,6 +74,8 @@ For detailed documentation on stored procedures, visit the [Stored Procedures Do
 - `get_fiscal_quarter()` – Determines fiscal quarter from a given date  
 - `get_fiscal_year()` – Returns the fiscal year of a transaction  
 
+For detailed documentation on functions, visit the [Functions Documentation](https://github.com/kp-8111/Atliq-Hardwares---Financial-Supply-Chain-Analytics-Using-SQL/blob/main/Functions%20Documentation%20.md).
+
 ---
 
 ## 🔥 Key Data Engineering Concepts Learned  
