@@ -100,3 +100,31 @@ BEGIN
     END IF;
 END
 ```
+
+## 3. `get_monthly_gross_sales_for_customer`
+**Description:**  
+Retrieves monthly gross sales for specified customers by calculating total sales value.
+
+**Parameters:**
+- `in_customer_codes` (TEXT): Comma-separated customer codes.
+
+**Query:**
+```sql
+CREATE DEFINER=`root`@`localhost` PROCEDURE `get_monthly_gross_sales_for_customer`(
+    in_customer_codes TEXT
+)
+BEGIN
+    SELECT 
+        s.date,
+        SUM(s.sold_quantity * g.gross_price) AS total_gross_sales
+    FROM fact_sales_monthly s 
+    JOIN fact_gross_price g 
+    ON
+        s.product_code = g.product_code AND
+        g.fiscal_year = get_fiscal_year(s.date)
+    WHERE
+        FIND_IN_SET(s.customer_code, in_customer_codes) > 0
+    GROUP BY s.date
+    ORDER BY s.date;
+END
+```
